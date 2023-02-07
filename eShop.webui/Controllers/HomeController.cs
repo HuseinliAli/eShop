@@ -31,17 +31,11 @@ namespace eShop.webui.Controllers
                  new Product{Name = "Poco",Price = 567.5,Description = "good price"}
             };
 
-            var categories = new List<Category>()
-            {
-                new Category{Name = "Phones", Description="Category of Phones"},
-                new Category{Name = "TVs", Description="Category of TVs"},
-                new Category{Name = "Noutbooks", Description="Category of Noutbooks"},
-            };
+            
 
             var productViewModel = new ProductViewModels
             {
-                Products = products,
-                Categories = categories
+                Products = products
             };
 
             return View(productViewModel);
