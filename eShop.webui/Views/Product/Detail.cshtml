@@ -1,5 +1,18 @@
-﻿@model eShop.webui.Models.Product
-<p>product/detail</p>
-<p>@Model.Name</p>
-<p>@Model.Price</p>
-<p>@Model.Description</p>
+﻿<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            @await Component.InvokeAsync("Categories")
+        </div>
+
+        <div class="col-md-9">
+           Detail Page
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
