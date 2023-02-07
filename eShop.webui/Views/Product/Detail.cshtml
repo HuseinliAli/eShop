@@ -4,8 +4,13 @@
             @await Component.InvokeAsync("Categories")
         </div>
 
-        <div class="col-md-9">
-           Detail Page
+        <div class="col-md-3">
+            <img src="~/img/@Model.ImageUrl" class="img-fluid card-img-top" />
+            <div class="card-body">
+                <p class="card-title">@Model.Name</p>
+                <p class="card-text">@Model.Description</p>
+                <p class="card-text">@Model.Price</p>
+            </div>
         </div>
     </div>
 </div>

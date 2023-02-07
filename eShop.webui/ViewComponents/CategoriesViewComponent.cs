@@ -1,4 +1,5 @@
-﻿using eShop.webui.Models;
+﻿using eShop.webui.Data;
+using eShop.webui.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eShop.webui.ViewComponents
@@ -7,12 +8,7 @@ namespace eShop.webui.ViewComponents
     {
         public IViewComponentResult Invoke()
         {
-            var categories = new List<Category>()
-            {
-                new Category{Name = "Phones", Description="Category of Phones"},
-                new Category{Name = "TVs", Description="Category of TVs"},
-                new Category{Name = "Noutbooks", Description="Category of Noutbooks"},
-            };
+            var categories = CategoryRepository.Categories;
             return View(categories);
         }
     }
