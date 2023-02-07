@@ -14,6 +14,6 @@ namespace eShop.entities.Concrete
         public string CategoryName { get; set; }
         public string CategoryImageUrl { get; set; }
 
-        public List<ProductCategory> ProductCategory{ get; set; }
+        public List<ProductCategory> ProductCategories { get; set; }
     }
 }

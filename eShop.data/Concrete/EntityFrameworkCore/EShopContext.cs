@@ -1,4 +1,5 @@
 ﻿using eShop.entities.Concrete;
+using eShop.entities.Junction;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,12 @@ namespace eShop.data.Concrete.EntityFrameworkCore
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data source=shopDb");
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder
+                .Entity<ProductCategory>()
+                    .HasKey(k => new { k.ProductId, k.CategoryId });
         }
         public DbSet<Product> Products{ get; set; }
         public DbSet<Category> Categories { get; set; }
