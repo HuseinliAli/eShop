@@ -17,6 +17,8 @@ namespace eShop.webui.Controllers
 
         public IActionResult Index()
         {
+          
+
             var productViewModel = new ProductViewModels
             {
                 Products = ProductRepository.Products

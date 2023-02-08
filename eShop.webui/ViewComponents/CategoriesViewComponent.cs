@@ -9,6 +9,11 @@ namespace eShop.webui.ViewComponents
         public IViewComponentResult Invoke()
         {
             var categories = CategoryRepository.Categories;
+            if (RouteData.Values["action"].ToString()=="List")
+            {
+                ViewBag.SelectedCategory = RouteData?.Values["id"];
+            }
+            
             return View(categories);
         }
     }
