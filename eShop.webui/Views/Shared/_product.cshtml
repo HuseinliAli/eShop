@@ -1,10 +1,12 @@
-﻿<a asp-controller="Product" asp-action="Detail" asp-route-id="@Model.ProductId">
-    <div class="card mt-2 text-decoration-none">
+﻿
+<div class="card mt-2 text-decoration-none">
+    <a asp-controller="Product" asp-action="Detail" asp-route-id="@Model.ProductId">
         <img src="~/img/@Model.ImageUrl" class="img-fluid card-img-top" style="object-fit:cover; height:300px">
-        <div class="card-body">
-            <p class="card-title">@Model.Name</p>
-            <p class="card-text">@Model.Description</p>
-            <p class="card-text">@Model.Price</p>
-        </div>
+    </a>
+    <div class="card-body">
+        <p class="card-title">@Model.Name</p>
+        <p class="card-text">@Model.Description</p>
+        <p class="card-text">@Model.Price</p>
+        <a asp-controller="Product" asp-action="Edit" asp-route-id="@Model.ProductId" class="btn btn-warning">Edit</a>
     </div>
-</a>
+</div>
